@@ -1,23 +1,28 @@
 #include<stdio.h>
 int main()
 {
-    int v[2004],n,k;
+    int i,n,count=0;
     scanf("%d",&n);
-    for (k=0;k<n;k++)
+    int arr[n];
+    for(i=0;i<n;i++)
     {
-        scanf("%d",&v[k]);
+        scanf("%d",&arr[i]);
     }
-    for (k=0;k<n;k++)
-    {
-        if (v[k]%2!=0)
-        {
-            if (k%2==0)
-            {
-                printf("False");
-                return 0;
-            }
-        }
-    }
+    for(i=0;i<n;i++)
+   {
+       if(arr[i]%2!=0)
+       {
+           if(i%2==0)
+           {
+               count++;
+               break;
+           }
+       }
+   }
+    if(count==0)
     printf("True");
+    else
+    printf("False");
     return 0;
+    
 }

@@ -1,32 +1,27 @@
 #include<stdio.h>
 int main()
 {
-	int v[2004],k,r,l,m=0,n=0;
-	scanf("%d",&l);	
-	for(k=0;k<l;k++)
-	{
-		scanf("%d ",&v[k]);
-	}
-	for(k=0;k<l;k++)
-	{
-		n+=v[k];
-	}
-	r=n/l;
-	for(k=0;k<l;k++)
-	{
-		if(v[k]==r)
-		{
-			m++;
-			break;
-		}
-	}
-	if(m==1)
-	{
-		printf("True");
-	}
-	else
-	{
-		printf("False");
-	}
-	return 0;
+    int n,i,ele,sum=0,count=0,avg;
+    scanf("%d",&n);
+    int arr[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    scanf("%d",&ele);
+    for(i=0;i<n;i++)
+    {
+        sum=sum+arr[i];
+    }
+    avg=sum/n;
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]==avg)
+        count++;
+    }
+    if(count>0)
+    printf("True");
+    else
+    printf("False");
+    return 0;
 }

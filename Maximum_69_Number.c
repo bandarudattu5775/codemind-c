@@ -1,25 +1,27 @@
 #include<stdio.h>
 int main()
 {
- int v[2004],k=0,n,r,j;
- scanf("%d",&n);
- while(n>0)
- {
-   r=n%10;
-   v[k]=r;
-   n/=10;
-   k++;
-}
-for(j=k;j>=0;j--)
-{
-if(v[j]==6)
-{
- v[j]=9;
-  break;
-}
-}
-for(j=k-1;j>=0;j--)
-{
-printf("%d",v[j]);
-}
+    int a,r=0,b,rev=0,c,d=0;
+    scanf("%d",&a);
+    while(a!=0)
+    {
+        b=a%10;
+        a=a/10;
+        r=r*10+b;
+    }
+    while(r!=0)
+    {
+        c=r%10;
+        r=r/10;
+        if(d<1)
+        {
+            if(c==6)
+            {
+                c=9;
+                d=1;
+            }
+        }
+        rev=rev*10+c;
+    }
+    printf("%d",rev);
 }
